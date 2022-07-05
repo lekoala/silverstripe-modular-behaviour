@@ -1,0 +1,13 @@
+{
+  "name": "lekoala-silverstripe-modular-behaviour",
+  "description": "Silverstripe Modular Behaviour integration",
+  "scripts": {
+    "copy": "shx cp -r ./node_modules/modular-behaviour.js/*.js ./client/"
+  },
+  "author": "LeKoala",
+  "license": "MIT",
+  "dependencies": {
+    "modular-behaviour.js": "^3.1.0"
+  },
+  "keywords": []
+}

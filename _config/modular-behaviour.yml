@@ -1,0 +1,5 @@
+---
+Name: modular-behaviour
+---
+LeKoala\ModularBehaviour\ModularFormField:
+  enable_modular_requirements: true # set to false if you included the custom element yourself
