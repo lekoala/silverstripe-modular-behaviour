@@ -77,6 +77,9 @@ trait ModularBehaviour
      */
     public function getModularName()
     {
+        if ($this->getModularSrc()) {
+            return null;
+        }
         return (new \ReflectionClass($this))->getShortName();
     }
 
@@ -108,16 +111,17 @@ trait ModularBehaviour
     public function getModularField($properties = [])
     {
         // Requirements
-        if ($this->config()->enable_modular_requirements) {
+        if (ModularFormField::config()->enable_modular_requirements) {
             self::modularRequirements();
         }
 
         $field = parent::Field($properties);
 
         // Build attrs
-        $attrs = [
-            'name' => $this->getModularName(),
-        ];
+        $attrs = [];
+        if ($this->getModularName()) {
+            $attrs['name'] = $this->getModularName();
+        }
         $selector = $this->getModularSelector();
         if ($selector) {
             $attrs['selector'] = $selector;
