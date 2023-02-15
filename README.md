@@ -69,6 +69,11 @@ You can also (lazily if needed) load the source script instead of relying on the
 
 Simply override `getModularSrc` to return the public path to the js file that contains the constructor.
 
+## ESM Note
+
+Due to ajax scripts being loaded through globalEval and not supporting esm module (export not recognized), the min
+file is built using iife.
+
 ## Compatibility
 
 Tested with ^4.10 but should work on any 4.x projects

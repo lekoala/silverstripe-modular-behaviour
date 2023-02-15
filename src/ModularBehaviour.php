@@ -14,6 +14,7 @@ trait ModularBehaviour
 
     public static function modularRequirements()
     {
+        // We need iife for ajax support
         Requirements::javascript("lekoala/silverstripe-modular-behaviour: client/modular-behaviour.min.js", ["type" => "module"]);
         // Ideally this should be supported by your backend provider (see Defer Backend)
         Requirements::javascript("lekoala/silverstripe-modular-behaviour: client/fallback.js", ["nomodule" => true]);
