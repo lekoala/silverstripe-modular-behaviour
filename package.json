@@ -2,13 +2,14 @@
   "name": "lekoala-silverstripe-modular-behaviour",
   "description": "Silverstripe Modular Behaviour integration",
   "scripts": {
-    "copy": "shx cp -r ./node_modules/modular-behaviour.js/*.js ./client/",
-    "build-iife": "esbuild --mangle-props=^_ --bundle --minify --format=iife --sourcemap client/modular-behaviour.js --outfile=client/modular-behaviour.min.js"
+    "copy": "shx cp -r ./node_modules/modular-behaviour.js/*.js ./client/ && shx cp -r ./node_modules/modular-behaviour.js/utils/*.js ./client/utils/",
+    "build-iife": "esbuild --mangle-props=^_ --bundle --minify --format=iife --sourcemap client/modular-behaviour.js --outfile=client/modular-behaviour.min.js",
+    "update-deps": "npx npm-check-updates -u"
   },
   "author": "LeKoala",
   "license": "MIT",
   "dependencies": {
-    "modular-behaviour.js": "^3.1.0"
+    "modular-behaviour.js": "^3.2.0"
   },
   "keywords": []
 }
