@@ -9,7 +9,7 @@
   "author": "LeKoala",
   "license": "MIT",
   "dependencies": {
-    "modular-behaviour.js": "^3.2.0"
+    "modular-behaviour.js": "git://github.com/lekoala/modular-behaviour.js.git#1e18eab7d218ee404d526f092f7683812ded97a4"
   },
   "keywords": []
 }
